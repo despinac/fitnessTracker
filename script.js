@@ -17,7 +17,7 @@ d3.csv("data.csv").then(function (data) {
     var inputElement = d3.select("#user-input");
     var inputValue = inputElement.property("value");
 
-    var filteredData = trainings.filter(trainings => trainings.vorname.includes(inputValue));
+    //var filteredData = trainings.filter(trainings => trainings.vorname.includes(inputValue));
     // console.log(filteredData.length)
     if (filteredData.length === 0 && inputValue !== "Something to give no results"){
       d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
@@ -27,6 +27,6 @@ d3.csv("data.csv").then(function (data) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
-      d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>" +(filteredData[i]['vorname'])+"</td>" +"<td>" +(output[i]['datum'])+"</td>") }
+      d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>" +(trainings[i]['vorname'])+"</td>" +"<td>" +(trainings[i]['datum'])+"</td>") }
   };
 });
