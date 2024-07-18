@@ -19,11 +19,11 @@ d3.csv("data.csv").then(function (data) {
 
     //var filteredData = trainings.filter(trainings => trainings.vorname.includes(inputValue));
     // console.log(filteredData.length)
-    if (filteredData.length === 0 && inputValue !== "Something to give no results"){
-      d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
-    }
+    //if (filteredData.length === 0 && inputValue !== "Something to give no results"){
+    //  d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
+    //}
 
-    for (var i = 0; i < filteredData.length; i++) {
+    for (var i = 0; i < trainings.length; i++) {
       // console.log(output[i]['original_title'])
       // console.log(output[i]['avg_vote'])
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
