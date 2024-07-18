@@ -16,14 +16,12 @@ var inputValue = d3.select("#user-input").property("value");
 
 var filteredTrainings = trainings.filter(trainings => trainings.vorname.includes(inputValue));
 
-var output = _.sortBy(filteredTrainings, ‘nummer’).reverse()
-
 for (var i = 0; i < filteredTrainings.length; i++) {
 
 d3.select("tbody").insert("tr").html(
-"<td>" + (output[i]['nummer'])+"</td>" +
-"<td>" + (output[i]['vorname'])+"</td>" +
-"<td>" + (output[i]['datum'])+"</td>" +
+"<td>" + (filteredTrainings[i]['nummer'])+"</td>" +
+"<td>" + (filteredTrainings[i]['vorname'])+"</td>" +
+"<td>" + (filteredTrainings[i]['datum'])+"</td>" +
 )
 }
 }
