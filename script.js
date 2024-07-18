@@ -23,7 +23,7 @@ d3.csv("data.csv").then(function (data) {
         d3.select("tbody").insert("tr").html(
         "<td>" + (trainings[i]['nummer'])+"</td>" +
         "<td>" + (trainings[i]['vorname'])+"</td>" +
-        "<td>" + (trainings[i]['datum'])+"</td>" +
+        "<td>" + (trainings[i]['datum'])+"</td>"
         )
         }
     }
