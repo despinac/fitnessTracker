@@ -1,29 +1,30 @@
-d3.csv("data.csv").then(function (data)) {
-console.log("Data", data);
+d3.csv("data.csv").then(function (data) {
+    console.log("Data", data);
 
-var trainings = data;
-var button = d3.select("#button");
-var form = d3.select("#form");
-button.on("click", runEnter);
-form.on("submit", runEnter);
+    var trainings = data;
 
-function runEnter() {
+    var button = d3.select("#button");
 
-d3.select("tbody").html("");
+    var form = d3.select("#form");
 
-d3.event.preventDefault();
+    button.on("click", runEnter);
+    form.on("submit", runEnter);
 
-var inputValue = d3.select("#user-input").property("value");
+    function runEnter() {
+        d3.select("tbody").html("");
+        d3.event.preventDefault();
 
-var filteredTrainings = trainings.filter(trainings => trainings.vorname.includes(inputValue));
+        var inputValue = d3.select("#user-input").property("value");
 
-for (var i = 0; i < filteredTrainings.length; i++) {
+        var filteredTrainings = trainings.filter(trainings => trainings.vorname.includes(inputValue));
 
-d3.select("tbody").insert("tr").html(
-"<td>" + (trainings[i]['nummer'])+"</td>" +
-"<td>" + (trainings[i]['vorname'])+"</td>" +
-"<td>" + (trainings[i]['datum'])+"</td>" +
-)
-}
-}
+        for (var i = 0; i < filteredTrainings.length; i++) {
+
+        d3.select("tbody").insert("tr").html(
+        "<td>" + (trainings[i]['nummer'])+"</td>" +
+        "<td>" + (trainings[i]['vorname'])+"</td>" +
+        "<td>" + (trainings[i]['datum'])+"</td>" +
+        )
+        }
+    }
 }
