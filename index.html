@@ -8,8 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script src="script.js"></script>
-<button type="button" onclick="alert('Gut. Dein Eintrag wurde gespreichert!')">Ja</button>
-<button type="button" onclick="alert('Schade...')">Nein</button>
+<h1>Deine Trainings</h1>
+<h2 >Gib den Name der Person, deren Trainings du sehen möchtest:</h2>
+<form id=”form”>
+    <label for=”user-input”>Vorname:</label><input class=”form-control” id=”user-input” placeholder="Gib einen Namen ein ... ">
+    <button id=”button”>Finde die Trainings</button>
+</form>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Datum</th>
+    </tr>
+    </thead>
+</table>
 </body>
 </html>
