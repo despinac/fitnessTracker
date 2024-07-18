@@ -1,4 +1,6 @@
 d3.csv("data.csv").then(function (data)) {
+console.log(data);
+
 var trainings = data;
 var button = d3.select("#button");
 var form = d3.select("#form");
