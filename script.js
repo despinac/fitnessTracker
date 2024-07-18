@@ -15,9 +15,9 @@ d3.csv("data.csv").then(function (data) {
 
     d3.event.preventDefault();
     var inputElement = d3.select("#user-input");
-    var inputValue = inputElement.property("value").toLowerCase().trim();
+    var inputValue = inputElement.property("value");
 
-    var filteredData = trainings.filter(trainings => trainings.vorname.toLowerCase().trim().includes(inputValue));
+    var filteredData = trainings.filter(trainings => trainings.vorname.includes(inputValue));
     // console.log(filteredData.length)
     if (filteredData.length === 0 && inputValue !== "Something to give no results"){
       d3.select("p").classed('noresults', true).html("<center><strong>No results. Please check your spelling!</strong>")
