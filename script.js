@@ -1,5 +1,5 @@
 d3.csv("data.csv").then(function (data)) {
-console.log(data);
+console.log("Data", data);
 
 var trainings = data;
 var button = d3.select("#button");
@@ -25,4 +25,5 @@ d3.select("tbody").insert("tr").html(
 "<td>" + (trainings[i]['datum'])+"</td>" +
 )
 }
-}}
+}
+}
