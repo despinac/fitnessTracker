@@ -19,9 +19,9 @@ var filteredTrainings = trainings.filter(trainings => trainings.vorname.includes
 for (var i = 0; i < filteredTrainings.length; i++) {
 
 d3.select("tbody").insert("tr").html(
-"<td>" + (filteredTrainings[i]['nummer'])+"</td>" +
-"<td>" + (filteredTrainings[i]['vorname'])+"</td>" +
-"<td>" + (filteredTrainings[i]['datum'])+"</td>" +
+"<td>" + (trainings[i]['nummer'])+"</td>" +
+"<td>" + (trainings[i]['vorname'])+"</td>" +
+"<td>" + (trainings[i]['datum'])+"</td>" +
 )
 }
 }
