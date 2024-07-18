@@ -16,6 +16,8 @@ var inputValue = d3.select("#user-input").property("value");
 
 var filteredTrainings = trainings.filter(trainings => trainings.vorname.includes(inputValue));
 
+var output = _.sortBy(filteredTrainings, ‘nummer’).reverse()
+
 for (var i = 0; i < filteredTrainings.length; i++) {
 
 d3.select("tbody").insert("tr").html(
