@@ -1,4 +1,4 @@
-d3.csv("movies.csv").then(function (data) {
+d3.csv("data.csv").then(function (data) {
   console.log(data);
 
   var trainings = data;
@@ -29,5 +29,4 @@ d3.csv("movies.csv").then(function (data) {
       // d3.select("tbody>tr>td").text(output[i]['original_title']);
       d3.select("tbody").insert("tr").html("<td>"+[i+1]+"</td>"+"<td>" +(filteredData[i]['vorname'])+"</td>" +"<td>" +(output[i]['datum'])+"</td>") }
   };
-
 });
